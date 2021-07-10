@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import gnome from './gnome.png';
 import './App.css';
 import React, {Component} from 'react';
 
@@ -14,14 +14,12 @@ class App extends Component {
         y: 0
       }
     }
-
-
   }
 
   render() {
     return (
       <div className="App">
-        <img src={"https://i.pinimg.com/564x/58/d6/f2/58d6f2613ea7d1f883f7513e3a73241a.jpg"} className="App-logo" alt="logo" 
+        <img src={gnome} className="App-logo" alt="logo" 
           style={{position: 'absolute', top: this.state.currentPosition.y, left: this.state.currentPosition.x}}
 
         />
@@ -42,13 +40,13 @@ class App extends Component {
       SPACE: 32
     };
 
-    const offset = 10;
+    const speed = 15;
     let newPosition = this.state.currentPosition;
 
-    if(e.keyCode === KEY.LEFT   || e.keyCode === KEY.A) newPosition.x -= offset;
-    if(e.keyCode === KEY.RIGHT  || e.keyCode === KEY.D) newPosition.x += offset
-    if(e.keyCode === KEY.UP     || e.keyCode === KEY.W) newPosition.y -= offset;
-    if(e.keyCode === KEY.DOWN     || e.keyCode === KEY.S) newPosition.y += offset;
+    if (e.keyCode === KEY.LEFT   || e.keyCode === KEY.A) newPosition.x -= speed;
+    if (e.keyCode === KEY.RIGHT  || e.keyCode === KEY.D) newPosition.x += speed;
+    if(e.keyCode === KEY.UP     || e.keyCode === KEY.W) newPosition.y -= speed;
+    if(e.keyCode === KEY.DOWN     || e.keyCode === KEY.S) newPosition.y += speed;
     //if(e.keyCode === KEY.SPACE) keys.space = value;
 
     this.setState({currentPosition: newPosition});
