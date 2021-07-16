@@ -82,9 +82,7 @@ export class Reacteroids extends Component {
 
   update() {
     const context = this.state.context;
-    const keys = this.state.keys;
-    const ship = this.ship[0];
-
+    
     context.save();
     context.scale(this.state.screen.ratio, this.state.screen.ratio);
 
@@ -162,7 +160,6 @@ export class Reacteroids extends Component {
   }
 
   generateAsteroids(howMany){
-    let asteroids = [];
     let ship = this.ship[0];
     for (let i = 0; i < howMany; i++) {
       let asteroid = new Asteroid({
@@ -247,7 +244,7 @@ export class Reacteroids extends Component {
 
     return (
       <div>
-        <img src={gnome} id='gnome' style={{display: 'none'}} />
+        <img src={gnome} id='gnome' style={{display: 'none'}} alt={''} />
         { endgame }
         <span className="score current-score" >Score: {this.state.currentScore}</span>
         <span className="score top-score" >Top Score: {this.state.topScore}</span>

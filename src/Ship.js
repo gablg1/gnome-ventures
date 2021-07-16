@@ -42,10 +42,10 @@ export default class Ship {
   }
 
   rotate(dir){
-    if (dir == 'LEFT') {
+    if (dir === 'LEFT') {
       this.rotation -= this.rotationSpeed;
     }
-    if (dir == 'RIGHT') {
+    if (dir === 'RIGHT') {
       this.rotation += this.rotationSpeed;
     }
   }
@@ -127,7 +127,7 @@ export default class Ship {
     context.closePath();
     context.fill();
     context.stroke(); */
-    
+
     context.drawImage(document.getElementById('gnome'), -20, -20, 50, 60)
     context.restore();
 
