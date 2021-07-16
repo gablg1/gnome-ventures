@@ -113,6 +113,8 @@ export default class Ship {
     context.save();
     context.translate(this.position.x, this.position.y);
     context.rotate(this.rotation * Math.PI / 180);
+    
+    /*
     context.strokeStyle = '#ffffff';
     context.fillStyle = '#000000';
     context.lineWidth = 2;
@@ -124,7 +126,10 @@ export default class Ship {
     context.lineTo(-10, 10);
     context.closePath();
     context.fill();
-    context.stroke();
+    context.stroke(); */
+    
+    context.drawImage(document.getElementById('gnome'), -20, -20, 50, 60)
     context.restore();
+
   }
 }
