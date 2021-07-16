@@ -40,7 +40,7 @@ class App extends Component {
       SPACE: 32
     };
 
-    const speed = 15;
+    const speed = 100;
     let newPosition = this.state.currentPosition;
 
     if (e.keyCode === KEY.LEFT   || e.keyCode === KEY.A) newPosition.x -= speed;
